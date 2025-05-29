@@ -1,0 +1,39 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:auto;
+    width:450px;
+    flex-wrap:wrap;
+}
+
+#title {
+    font-size: 50px;
+    font-weight: 900;
+    margin-top:100px;
+    margin-bottom:100px;
+}
+#etch-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap:wrap;
+    width:450px;
+}
+
+#block-a, #block-b, #block-c, #block-d, #block-e, #block-f, #block-g, #block-h, #block-i, #block-j, #block-k, #block-l, #block-m, #block-n, #block-o, #block-p {
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    border-style:solid;
+    border-width: 1px;
+    border-color:black;
+    width:100px;
+    height:100px;
+}
