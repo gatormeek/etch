@@ -4,20 +4,22 @@ body {
     align-items: center;
 }
 
-#page-container {
+#dropdown {
     display: flex;
     justify-content: center;
-    align-items: center;
-    height:auto;
-    width:450px;
-    flex-wrap:wrap;
+}
+
+.dropdown-content {
+    display: none;
 }
 
 #title {
+    display:flex;
     font-size: 50px;
     font-weight: 900;
     margin-top:100px;
     margin-bottom:100px;
+    justify-content: center;
 }
 #etch-container {
     display: flex;
@@ -27,13 +29,3 @@ body {
     width:450px;
 }
 
-#block-a, #block-b, #block-c, #block-d, #block-e, #block-f, #block-g, #block-h, #block-i, #block-j, #block-k, #block-l, #block-m, #block-n, #block-o, #block-p {
-    display:flex;
-    justify-content: center;
-    align-items:center;
-    border-style:solid;
-    border-width: 1px;
-    border-color:black;
-    width:100px;
-    height:100px;
-}
