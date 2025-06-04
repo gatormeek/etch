@@ -5,20 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etch-A-Sketch</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     </head>
     <body>
+        <div id="title">Etch-A-Sketch</div>
         <div id="page-container">
-            <div id="title">Etch-A-Sketch</div>
             <div id="dropdown">
-                <button class="dropbtn">Change Grid Size</button>
+                <button id="dropbtn" class="dropbtn">Change Grid Size</button>
                 <div id="dropdown-choices" class="dropdown-content">
-                    <p id="size-zero">1</p>
-                    <p id="size-one">16</p>
-                    <p id="size-two">64</p>
-                    <p id="size-three">256</p>
-                    <p id="size-four">1024</p>
-                    <p id="size-five">4096</p>
-                    <p id="size-six">16384</p>
+                    <a id="size-zero">1</a>
+                    <a id="size-one">16</a>
+                    <a id="size-two">64</a>
+                    <a id="size-three">256</a>
+                    <a id="size-four">1024</a>
+                    <a id="size-five">4096</a>
+                    <a id="size-six">16384</a>
                 </div>
             </div>
             <div id="etch-container"></div>

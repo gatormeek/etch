@@ -1,31 +1,55 @@
 body {
-    display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#dropdown {
+#page-container {
+    display: flex;
+}
+
+#dropbtn {
     display: flex;
     justify-content: center;
 }
 
-.dropdown-content {
+#dropdown {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 150px;
+    position: absolute;
+    margin-top: 25px;
+}
+
+#dropdown-choices {
     display: none;
+    flex-direction:column;
+    align-items: baseline;
+    position: relative;
 }
 
 #title {
     display:flex;
     font-size: 50px;
     font-weight: 900;
-    margin-top:100px;
+    margin-top:25px;
     margin-bottom:100px;
     justify-content: center;
 }
+
 #etch-container {
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-wrap:wrap;
-    width:450px;
+    width:260px;
+    height:250px;
+    margin: 0 auto;
+    margin-top: 25px;
 }
 
+a[id^="size-"] {
+    border: 1px solid black;
+    width: 100%;
+    display:block;
+    box-sizing: border-box;
+}
