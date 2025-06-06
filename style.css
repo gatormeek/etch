@@ -10,6 +10,7 @@ body {
 #dropbtn {
     display: flex;
     justify-content: center;
+    margin-top: 100px;
 }
 
 #dropdown {
@@ -41,10 +42,11 @@ body {
     display: flex;
     justify-content: center;
     flex-wrap:wrap;
-    width:260px;
-    height:250px;
+    width:500px;
+    height:500px;
     margin: 0 auto;
     margin-top: 25px;
+    border: 1px solid black;
 }
 
 a[id^="size-"] {
