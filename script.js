@@ -9,9 +9,24 @@ let sizeThree = document.querySelector("#size-three");
 let sizeFour = document.querySelector("#size-four");
 let sizeFive = document.querySelector("#size-five");
 let sizeSix = document.querySelector("#size-six");
+let eraseBtn = document.querySelector("#erase-button");
 let mouseDown = false;
 document.body.addEventListener('mousedown', () => mouseDown = true);
 document.body.addEventListener('mouseup', () => mouseDown = false);
+
+function randomColor (color) {
+    function randomNum () {
+        return Math.round(Math.random()*255);
+    }
+    return `rgb(${randomNum()}, ${randomNum()}, ${randomNum()})`;
+}
+
+eraseBtn.addEventListener('click', () => {
+            let allButtons = etchContainer.querySelectorAll('button');
+            allButtons.forEach(btn => {
+                btn.style.background='';
+            });
+        });
 
 sizeZero.addEventListener('click', () => {
     etchContainer.innerHTML = '';
@@ -28,7 +43,7 @@ sizeZero.addEventListener('click', () => {
                 column.style.margin="0";
                 column.addEventListener('mouseover', () => {
                     if (!mouseDown) {
-                        column.style.background="red";
+                        column.style.background=randomColor();
                     } else {
                         column.style.background="";
                     }
@@ -37,7 +52,6 @@ sizeZero.addEventListener('click', () => {
             }
             document.getElementById("etch-container").appendChild(row);
         }
-        
     }
     makeEtch();
 });
@@ -57,7 +71,7 @@ sizeOne.addEventListener('click', () => {
                 column.style.margin="0";
                 column.addEventListener('mouseover', () => {
                     if (!mouseDown) {
-                        column.style.background="red";
+                        column.style.background=randomColor();
                     } else {
                         column.style.background="";
                     }
@@ -86,7 +100,7 @@ sizeTwo.addEventListener('click', () => {
                 column.style.margin="0";
                 column.addEventListener('mouseover', () => {
                     if (!mouseDown) {
-                        column.style.background="red";
+                        column.style.background=randomColor();
                     } else {
                         column.style.background="";
                     }
@@ -115,7 +129,7 @@ sizeThree.addEventListener('click', () => {
                 column.style.margin="0";
                 column.addEventListener('mouseover', () => {
                     if (!mouseDown) {
-                        column.style.background="red";
+                        column.style.background=randomColor();
                     } else {
                         column.style.background="";
                     }
@@ -144,7 +158,7 @@ sizeFour.addEventListener('click', () => {
                 column.style.margin="0";
                 column.addEventListener('mouseover', () => {
                     if (!mouseDown) {
-                        column.style.background="red";
+                        column.style.background=randomColor();
                     } else {
                         column.style.background="";
                     }
@@ -173,7 +187,7 @@ sizeFive.addEventListener('click', () => {
                 column.style.margin="0";
                 column.addEventListener('mouseover', () => {
                     if (!mouseDown) {
-                        column.style.background="red";
+                        column.style.background=randomColor();
                     } else {
                         column.style.background="";
                     }
@@ -202,7 +216,7 @@ sizeSix.addEventListener('click', () => {
                 column.style.margin="0";
                 column.addEventListener('mouseover', () => {
                     if (!mouseDown) {
-                        column.style.background="red";
+                        column.style.background=randomColor();
                     } else {
                         column.style.background="";
                     }
@@ -221,6 +235,9 @@ selectSizeBtn.addEventListener('click', () => {
     sizeSelections.addEventListener('mouseleave', () => {
         sizeSelections.style.display="none";
     });
+    sizeSelections.addEventListener('click', () => {
+        sizeSelections.style.display="none";
+    })
 });
 selectionHover.forEach(link => {
     link.addEventListener('mouseenter', () => {
@@ -232,5 +249,5 @@ selectionHover.forEach(link => {
         link.style.color='';
         link.style.background='';
         link.style.border='';
-    })
-})
+    });
+});
